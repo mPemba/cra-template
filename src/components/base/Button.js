@@ -6,8 +6,16 @@ const Button = ({ children, variant }) => (
 
 const ButtonMain = styled.button`
   width: 200px;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Helvetica Neue", sans-serif;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+
   background: ${(props) => {
-    console.log("props: ", props);
     switch (props.variant) {
       case "primary":
         return props.theme.blue;
@@ -46,12 +54,6 @@ const ButtonMain = styled.button`
         return props.theme.white;
     }
   }};
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
 
   &:hover {
     opacity: 0.8;

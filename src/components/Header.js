@@ -6,13 +6,19 @@ import { EyeFilled } from "./icons/eyeFilled";
 const Header = ({ currentTheme, setCurrentTheme }) => {
   return (
     <HeaderMain>
-      <Title>Template</Title>
+      <Title>Style Guide</Title>
       {currentTheme === "light" ? (
-        <ThemeButton onClick={() => setCurrentTheme("dark")}>
+        <ThemeButton
+          aria-label="Enable Dark Mode"
+          onClick={() => setCurrentTheme("dark")}
+        >
           <Eye />
         </ThemeButton>
       ) : (
-        <ThemeButton onClick={() => setCurrentTheme("light")}>
+        <ThemeButton
+          aria-label="Enable Light Mode"
+          onClick={() => setCurrentTheme("light")}
+        >
           <EyeFilled />
         </ThemeButton>
       )}

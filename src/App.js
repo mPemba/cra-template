@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { ThemeProvider } from "styled-components";
 import { getTheme } from "./lib/theme";
 import { Button } from "./components/base/Button";
+import { Form } from "./components/Form";
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState("light");
@@ -27,7 +28,7 @@ function App() {
 
       <Main>
         <Content>
-          <h1>Style Guide</h1>
+          <h1>Heading 1</h1>
           <h2>Heading 2</h2>
           <h3>Heading 3</h3>
 
@@ -52,13 +53,7 @@ function App() {
           <Button variant="danger">Button Danger</Button>
           <Button variant="submit">Button Submit</Button>
 
-          <input type="text" placeholder="Input" />
-
-          <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select>
+          <Form />
         </Content>
       </Main>
     </ThemeProvider>
@@ -67,7 +62,7 @@ function App() {
 
 const Main = styled.main`
   width: 100%;
-  height: 90vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.background};
@@ -77,6 +72,7 @@ const Main = styled.main`
 
 const Content = styled.div`
   width: 80%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
