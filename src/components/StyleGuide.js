@@ -4,6 +4,10 @@ import { Form } from "./Form";
 import { ColorPalette } from "./ColorPalette";
 
 const StyleGuide = () => {
+  const handleButtonClick = (variant) => {
+    console.log(`${variant} clicked!`);
+  };
+
   return (
     <Main>
       <h1>Heading 1</h1>
@@ -25,10 +29,24 @@ const StyleGuide = () => {
         mollit anim id est laborum.
       </p>
 
-      <Button variant="primary">Button Primary</Button>
-      <Button variant="secondary">Button Secondary</Button>
-      <Button variant="tertiary">Button Tertiary</Button>
-      <Button variant="danger">Button Danger</Button>
+      <Button variant="primary" onClick={() => handleButtonClick("Primary")}>
+        Button Primary
+      </Button>
+
+      <Button
+        variant="secondary"
+        onClick={() => handleButtonClick("Secondary")}
+      >
+        Button Secondary
+      </Button>
+
+      <Button variant="tertiary" onClick={() => handleButtonClick("Tertiary")}>
+        Button Tertiary
+      </Button>
+
+      <Button variant="danger" onClick={() => handleButtonClick("Danger")}>
+        Button Danger
+      </Button>
 
       <Form />
 

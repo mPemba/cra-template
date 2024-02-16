@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
-const Button = ({ children, variant }) => (
-  <ButtonMain variant={variant}>{children}</ButtonMain>
+const Button = ({ children, variant, onClick }) => (
+  <ButtonMain $variant={variant} onClick={onClick}>
+    {children}
+  </ButtonMain>
 );
 
-const ButtonMain = styled.button`
+const ButtonMain = styled.button.attrs((props) => ({
+  $variant: props.$variant,
+  theme: props.theme,
+}))`
   width: 200px;
   padding: 1rem 2rem;
   margin: 1rem 0;
@@ -14,7 +19,7 @@ const ButtonMain = styled.button`
     opacity 0.3s ease-in-out;
 
   background: ${(props) => {
-    switch (props.variant) {
+    switch (props.$variant) {
       case "primary":
         return props.theme.blue;
       case "secondary":
@@ -28,14 +33,14 @@ const ButtonMain = styled.button`
     }
   }};
   border: ${(props) => {
-    if (props.variant === "secondary") {
+    if (props.$variant === "secondary") {
       return `1px solid ${props.theme.text}`;
     } else {
       return "none";
     }
   }};
   color: ${(props) => {
-    switch (props.variant) {
+    switch (props.$variant) {
       case "primary":
         return props.theme.white;
       case "secondary":

@@ -14,8 +14,6 @@ function App() {
       "(prefers-color-scheme: dark)"
     ).matches;
 
-    console.log("prefersDarkMode: ", prefersDarkMode);
-
     if (prefersDarkMode) {
       setCurrentTheme("dark");
     }
