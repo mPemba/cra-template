@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Header } from "./components/Header";
 import { ThemeProvider } from "styled-components";
 import { getTheme } from "./lib/theme";
+import { Button } from "./components/base/Button";
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState("light");
@@ -26,13 +27,38 @@ function App() {
 
       <Main>
         <Content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          <h1>Style Guide</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+
+          <p>Body Text</p>
+          <p>
+            <strong>Bold Text</strong>
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+
+          <Button variant="primary">Button Primary</Button>
+          <Button variant="secondary">Button Secondary</Button>
+          <Button variant="tertiary">Button Tertiary</Button>
+          <Button variant="danger">Button Danger</Button>
+          <Button variant="submit">Button Submit</Button>
+
+          <input type="text" placeholder="Input" />
+
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
         </Content>
       </Main>
     </ThemeProvider>
@@ -52,6 +78,8 @@ const Main = styled.main`
 const Content = styled.div`
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 export default App;

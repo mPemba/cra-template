@@ -9,6 +9,8 @@ const baseTheme = {
   grey300: "#D1D1D6",
   grey400: "#C7C7CC",
   grey500: "#AEAEB2",
+  white: "#fff",
+  black: "#000",
 };
 
 const darkTheme = {
