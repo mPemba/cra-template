@@ -6,13 +6,19 @@ import { EyeFilled } from "./icons/eyeFilled";
 const Header = ({ currentTheme, setCurrentTheme }) => {
   return (
     <HeaderMain>
-      <Title>Template</Title>
+      <Title>Style Guide</Title>
       {currentTheme === "light" ? (
-        <ThemeButton onClick={() => setCurrentTheme("dark")}>
+        <ThemeButton
+          aria-label="Enable Dark Mode"
+          onClick={() => setCurrentTheme("dark")}
+        >
           <Eye />
         </ThemeButton>
       ) : (
-        <ThemeButton onClick={() => setCurrentTheme("light")}>
+        <ThemeButton
+          aria-label="Enable Light Mode"
+          onClick={() => setCurrentTheme("light")}
+        >
           <EyeFilled />
         </ThemeButton>
       )}
@@ -28,6 +34,7 @@ const HeaderMain = styled.header`
   align-items: center;
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.text};
+  border-bottom: 1px solid ${(props) => props.theme.grey200};
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 `;
 
