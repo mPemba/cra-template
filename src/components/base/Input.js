@@ -5,6 +5,7 @@ const Input = ({ name, label, type, required, placeholder, onChange }) => {
     <InputContainer>
       <label htmlFor={name}>{label}</label>
       <InputMain
+        id={name}
         name={name}
         type={type}
         required={required}
