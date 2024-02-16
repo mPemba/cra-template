@@ -10,8 +10,6 @@ const ButtonMain = styled.button`
   margin: 1rem 0;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  font-family: "Helvetica Neue", sans-serif;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
     opacity 0.3s ease-in-out;
 
