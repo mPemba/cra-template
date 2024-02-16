@@ -22,7 +22,7 @@ const SelectContainer = styled.div`
 `;
 
 const SelectMain = styled.select`
-  padding: 12px;
+  padding: 12px 0;
   margin-top: 6px;
   border: 1px solid ${(props) => props.theme.text};
   color: ${(props) => props.theme.text};

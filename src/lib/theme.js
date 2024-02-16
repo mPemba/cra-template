@@ -1,7 +1,7 @@
 const baseTheme = {
-  blue: "#0056B1", // Original Blue "#007AFF",
-  green: "#008A23", // Original Green "#34C759",
-  red: "#CE2D25", // Original Red "#FF3B30",
+  blue: "#0072EC", // Original Blue "#007AFF",
+  green: "#34C759",
+  red: "#E22E25", // Original Red "#FF3B30",
   orange: "#FF9500",
   yellow: "#FFCC00",
   grey100: "#F2F2F7",

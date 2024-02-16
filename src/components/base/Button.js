@@ -23,8 +23,6 @@ const ButtonMain = styled.button`
         return props.theme.grey200;
       case "danger":
         return props.theme.red;
-      case "submit":
-        return props.theme.green;
       default:
         return props.theme.blue;
     }
@@ -45,8 +43,6 @@ const ButtonMain = styled.button`
       case "tertiary":
         return props.theme.black;
       case "danger":
-        return props.theme.white;
-      case "submit":
         return props.theme.white;
       default:
         return props.theme.white;

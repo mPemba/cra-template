@@ -34,6 +34,7 @@ const HeaderMain = styled.header`
   align-items: center;
   background-color: ${(props) => props.theme.background};
   color: ${(props) => props.theme.text};
+  border-bottom: 1px solid ${(props) => props.theme.grey200};
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 `;
 

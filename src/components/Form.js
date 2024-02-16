@@ -51,7 +51,7 @@ const Form = () => {
 
   return (
     <FormContainer onSubmit={submitForm}>
-      <h2>Form Example</h2>
+      <Title>Form Example</Title>
       <Input
         name="firstName"
         label="First Name"
@@ -146,12 +146,16 @@ const Form = () => {
         onChange={handleCheckboxChange}
       />
 
-      <Button variant="submit" type="submit">
+      <Button variant="primary" type="submit">
         Submit
       </Button>
     </FormContainer>
   );
 };
+
+const Title = styled.h2`
+  margin-bottom: 20px;
+`;
 
 const FormContainer = styled.form`
   width: 80%;
